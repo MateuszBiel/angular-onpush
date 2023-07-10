@@ -422,8 +422,16 @@
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
       <span>Build for Production</span>
     </button>
-  </div>
 
+    <button class="card card-small" (click)="add()" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+      <span>Add</span>
+    </button>
+
+    <span *ngFor="let item of int">{{int}}</span>
+
+  </div>
+  <app-inner [value]="int"> </app-inner>
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
       <pre *ngSwitchDefault>ng generate component xyz</pre>
